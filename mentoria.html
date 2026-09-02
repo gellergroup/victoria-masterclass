@@ -122,6 +122,7 @@ video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-see
 .marquee .track span{font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(1rem,1.8vw,1.35rem);padding:0 28px;display:inline-flex;align-items:center;gap:28px;white-space:nowrap;}
 .marquee .track span:after{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.5;}
 @keyframes scroll{to{transform:translateX(-50%);}}
+.hero-strip{display:none;}
 
 /* who */
 .who{background:var(--cream);}
@@ -237,7 +238,10 @@ video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-see
   .hero-bg img{object-position:center 18%;-webkit-mask-image:linear-gradient(180deg,#fff 0%,#fff 55%,transparent 95%);mask-image:linear-gradient(180deg,#fff 0%,#fff 55%,transparent 95%);}
   .hero-bg:before{background:rgba(44,32,23,.14);}
   .hero-bg:after{display:none;}
-  .hero-bg .chip{left:20px;bottom:20px;}
+  .hero-bg .chip{left:20px;bottom:34px;}
+  .hero-strip{display:block;order:1;position:relative;z-index:3;margin-top:-21px;padding:11px 0;border-block:1px solid rgba(255,255,255,.14);}
+  .hero-strip .track span{font-size:.84rem;letter-spacing:.14em;padding:0 16px;gap:16px;}
+  .hero-text .kicker{display:none;}
   .about .grid{grid-template-columns:1fr;gap:40px;}
   .about-photo{max-width:380px;margin:0 auto;}
   .fase{grid-template-columns:64px 1fr;gap:16px;padding:22px;}
@@ -273,6 +277,12 @@ video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-see
   <div class="hero-bg">
     <img src="assets/victoria-hero.jpg" alt="Victoria Salgueiro" />
     <div class="chip"><b>+8</b><span>anos no mercado</span></div>
+  </div>
+  <div class="marquee hero-strip" aria-hidden="true">
+    <div class="track">
+      <span>Mentoria Passaporte Carreira Internacional</span><span>Mentoria Passaporte Carreira Internacional</span><span>Mentoria Passaporte Carreira Internacional</span><span>Mentoria Passaporte Carreira Internacional</span>
+      <span>Mentoria Passaporte Carreira Internacional</span><span>Mentoria Passaporte Carreira Internacional</span><span>Mentoria Passaporte Carreira Internacional</span><span>Mentoria Passaporte Carreira Internacional</span>
+    </div>
   </div>
   <div class="wrap">
     <div class="hero-text">
