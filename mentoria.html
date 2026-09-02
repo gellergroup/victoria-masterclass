@@ -174,6 +174,12 @@ video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-see
 .about p:first-of-type{margin-top:26px;}
 .about .quote{font-family:var(--font-serif);font-style:italic;font-size:1.5rem;color:#fff;border-left:2px solid var(--gold);padding-left:22px;margin-top:28px;}
 .about .btn{margin-top:26px;}
+.about .bio-card{position:relative;background:linear-gradient(180deg,#fff,var(--cream));border:1px solid var(--gold);border-radius:12px;padding:clamp(26px,4.5vw,54px);box-shadow:0 50px 100px -40px rgba(0,0,0,.65);}
+.about .bio-card .kicker{color:var(--wine);}
+.about .bio-card .name{color:var(--wine);}
+.about .bio-card .role-line{color:var(--muted);}
+.about .bio-card p{color:#4a4036;}
+.about .bio-card .quote{color:var(--wine);}
 
 /* metodo (fases) */
 .metodo{background:var(--paper);}
@@ -432,8 +438,9 @@ video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-see
 <!-- ABOUT -->
 <section class="about pad" id="sobre">
   <div class="wrap">
+    <div class="bio-card reveal">
     <div class="grid">
-      <div class="about-photo reveal">
+      <div class="about-photo">
         <div class="gold-edge"></div>
         <div class="frame"><img src="assets/victoria-sobre.jpg" alt="Victoria Salgueiro" /></div>
       </div>
@@ -449,6 +456,7 @@ video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-see
         <p class="quote">Não é teoria de faculdade. Não é curso genérico de empreendedorismo. É o caminho que funciona, ensinado por quem está dentro do mercado todos os dias.</p>
         <a class="btn gold" href="#metodo">Quero aprender esse método <span class="arr">&rarr;</span></a>
       </div>
+    </div>
     </div>
   </div>
 </section>
