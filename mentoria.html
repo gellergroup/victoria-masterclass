@@ -114,10 +114,17 @@ video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-see
 .story .accent{margin-top:1.4em;font-family:var(--font-serif);font-style:italic;font-size:1.5rem;color:var(--wine);line-height:1.35;}
 .story .btn{margin-top:28px;}
 .story.alt{background:var(--cream);}
-.story .opener{font-family:var(--font-display);font-weight:800;font-size:clamp(1.3rem,2.5vw,1.7rem);color:var(--navy);line-height:1.25;}
-.dor-list{margin-top:1.1em;list-style:none;display:grid;gap:12px;}
-.dor-list li{position:relative;padding-left:26px;color:#4a4036;font-size:1.05rem;}
-.dor-list li:before{content:"";position:absolute;left:4px;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--wine);}
+/* dor */
+.dor{background:var(--paper);}
+.dor .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,90px);align-items:start;}
+.dor h2{margin-top:18px;color:var(--navy);font-size:clamp(1.6rem,3vw,2.4rem);}
+.dor p{margin-top:1.1em;color:#4a4036;}
+.dor .bridge{font-family:var(--font-display);font-weight:700;color:var(--navy);font-size:1.1rem;}
+.dor .stack{display:flex;flex-direction:column;gap:14px;}
+.dor .li{display:flex;gap:16px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--wine);border-radius:3px;box-shadow:0 12px 26px -18px rgba(44,32,23,.35);}
+.dor .li .n{font-family:var(--font-display);font-weight:800;color:var(--wine);font-size:1.1rem;line-height:1.4;}
+.dor .li p{margin:0;color:#4a4036;font-size:.98rem;}
+.dor .pior{color:var(--wine);font-weight:800;}
 
 /* caminho (pattern interrupt) */
 .caminho{background:var(--paper);padding-bottom:clamp(72px,9vw,128px);}
@@ -256,6 +263,7 @@ video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-see
   .hero .wrap{order:2;min-height:0;display:block;padding-top:10px;padding-bottom:48px;}
   .hero-text h1{margin-top:8px;}
   .mercado .mcards{grid-template-columns:1fr;}
+  .dor .grid{grid-template-columns:1fr;gap:34px;}
   .hero-text{width:100%;max-width:none;}
   .hero-bg{order:1;position:relative;width:100%;height:clamp(340px,54vh,480px);background:transparent;}
   .hero-bg img{object-position:center 18%;-webkit-mask-image:linear-gradient(180deg,#fff 0%,#fff 55%,transparent 95%);mask-image:linear-gradient(180deg,#fff 0%,#fff 55%,transparent 95%);}
@@ -340,19 +348,26 @@ video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-see
   </div>
 </section>
 
-<!-- STORY / DOR -->
-<section class="story pad">
-  <div class="narrow reveal">
-    <p class="opener">Você se formou acreditando que a sua profissão te levaria mais longe.</p>
-    <p>Estudou. Se dedicou. Talvez tenha feito uma pós, uma especialização, cursos extras. E, no fundo, sempre teve a expectativa de que tudo isso ia se converter em uma carreira sólida, em reconhecimento e em uma vida financeira diferente da que você tinha quando começou.</p>
-    <p>Só que a realidade chegou de um jeito diferente do esperado.</p>
-    <ul class="dor-list">
-      <li>O salário não acompanha o que você sabe.</li>
-      <li>A profissão paga abaixo do que você imaginava.</li>
-      <li>Você depende de um chefe que decide o seu horário, do humor do dia, do ritmo de outra pessoa.</li>
-    </ul>
-    <p>E aquela vontade de ter algo próprio continua ali, mas sem caminho claro.</p>
-    <p>Pior: você começa a ver gente da sua área construindo coisas interessantes. Profissionais que, em pouco tempo, estão atendendo clientes próprios, trabalhando de casa, com uma estrutura que parece distante da sua realidade. E aquela sensação de estar ficando para trás começa a pesar.</p>
+<!-- DOR -->
+<section class="dor pad">
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <span class="kicker dark">O ponto de partida</span>
+        <h2>Você se formou acreditando que a sua profissão te levaria mais longe.</h2>
+        <p>Estudou. Se dedicou. Talvez tenha feito uma pós, uma especialização, cursos extras. E, no fundo, sempre teve a expectativa de que tudo isso ia se converter em uma carreira sólida, em reconhecimento e em uma vida financeira diferente da que você tinha quando começou.</p>
+        <p class="bridge">Só que a realidade chegou de um jeito diferente do esperado.</p>
+      </div>
+      <div class="reveal">
+        <div class="stack">
+          <div class="li"><span class="n">01</span><p>O salário não acompanha o que você sabe.</p></div>
+          <div class="li"><span class="n">02</span><p>A profissão paga abaixo do que você imaginava.</p></div>
+          <div class="li"><span class="n">03</span><p>Você depende de um chefe que decide o seu horário, do humor do dia, do ritmo de outra pessoa.</p></div>
+        </div>
+        <p style="margin-top:24px">E aquela vontade de ter algo próprio continua ali, mas sem caminho claro.</p>
+        <p><strong class="pior">Pior:</strong> você começa a ver gente da sua área construindo coisas interessantes. Profissionais que, em pouco tempo, estão atendendo clientes próprios, trabalhando de casa, com uma estrutura que parece distante da sua realidade. E aquela sensação de estar ficando para trás começa a pesar.</p>
+      </div>
+    </div>
   </div>
 </section>
 
