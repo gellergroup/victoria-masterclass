@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mentoria Passaporte Carreira Internacional</title>
+<meta name="description" content="A formação completa para profissionais que querem construir uma carreira em assessoria de cidadania europeia, com método validado e encontros ao vivo mensais." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy:#2c2017;
+  --navy-2:#3a2a1d;
+  --navy-3:#4d3826;
+  --wine:#6d1f33;
+  --wine-2:#88283f;
+  --gold:#c2a062;
+  --gold-soft:#d8be8e;
+  --cream:#f3ede2;
+  --paper:#faf6ee;
+  --ink:#241b12;
+  --muted:#8a7c6c;
+  --line:rgba(44,32,23,.12);
+  --font-display:"Archivo",sans-serif;
+  --font-body:"Hanken Grotesk",sans-serif;
+  --font-serif:"Cormorant Garamond",serif;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+
+/* type */
+.kicker{font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;color:var(--gold);}
+.kicker.dark{color:var(--wine);}
+h1,h2,h3{font-family:var(--font-display);line-height:1.05;letter-spacing:-.01em;}
+h2{font-weight:800;text-transform:uppercase;font-size:clamp(1.9rem,4vw,3.1rem);letter-spacing:-.005em;}
+.lead{font-size:clamp(1.05rem,1.6vw,1.28rem);line-height:1.62;}
+.serif{font-family:var(--font-serif);font-style:italic;}
+
+/* layout */
+section{position:relative;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+.narrow{max-width:820px;margin:0 auto;padding:0 28px;}
+.pad{padding-block:clamp(72px,9vw,128px);}
+.sec-head{max-width:760px;}
+.sec-head .kicker{display:inline-block;margin-bottom:18px;}
+.sec-head h2{margin-bottom:0;}
+.center{margin-inline:auto;text-align:center;}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.7em;font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.86rem;padding:1.15em 2.1em;border-radius:2px;cursor:pointer;border:none;background:var(--wine);color:#fff;transition:transform .25s ease,background .25s ease,box-shadow .25s ease;box-shadow:0 10px 30px -12px rgba(109,31,51,.65);}
+.btn:hover{background:var(--wine-2);transform:translateY(-2px);box-shadow:0 16px 38px -14px rgba(109,31,51,.8);}
+.btn .arr{transition:transform .25s ease;}
+.btn:hover .arr{transform:translateX(4px);}
+.btn.gold{background:var(--gold);color:var(--navy);box-shadow:0 10px 30px -12px rgba(194,160,98,.7);}
+.btn.gold:hover{background:var(--gold-soft);}
+.btn.big{font-size:1rem;padding:1.35em 2.6em;}
+.btn.block{display:flex;width:100%;justify-content:center;}
+
+/* topbar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(44,32,23,.93);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;}
+.brand .seal{width:34px;height:34px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:var(--font-display);font-weight:800;font-size:.8rem;}
+.brand b{font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.18em;font-size:.82rem;}
+.brand span{display:block;font-size:.6rem;letter-spacing:.3em;color:var(--gold-soft);text-transform:uppercase;}
+.topbar .btn{padding:.7em 1.4em;font-size:.72rem;}
+@media(max-width:640px){.topbar .btn{display:none;}}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;overflow:hidden;}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 15% 10%,rgba(61,44,30,.92),transparent 60%),radial-gradient(80% 70% at 100% 100%,rgba(109,31,51,.35),transparent 55%);}
+.hero .wrap{position:relative;z-index:2;display:flex;align-items:center;min-height:clamp(560px,86vh,900px);padding-top:clamp(48px,6vw,80px);padding-bottom:clamp(48px,6vw,80px);}
+.hero-text{max-width:600px;width:58%;}
+.hero-bg{position:absolute;top:0;right:0;bottom:0;width:48%;z-index:1;overflow:hidden;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%;}
+.hero-bg:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy) 0%,rgba(44,32,23,.7) 22%,rgba(44,32,23,.12) 55%,transparent 100%);}
+.hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(44,32,23,.55),transparent 40%);}
+.hero-bg .chip{position:absolute;left:30px;bottom:34px;background:var(--cream);color:var(--navy);padding:14px 20px;border-radius:4px;box-shadow:0 20px 40px -16px rgba(0,0,0,.6);z-index:2;}
+.hero-bg .chip b{font-family:var(--font-display);font-weight:800;font-size:1.5rem;display:block;line-height:1;}
+.hero-bg .chip span{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+.hero h1{font-weight:800;text-transform:none;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.02em;margin-top:18px;}
+.hero p.sub{margin-top:22px;color:#e6dccb;max-width:48ch;}
+.hero .cta-row{margin-top:30px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;}
+
+/* VSL */
+.vsl{margin-top:26px;border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 12px,rgba(255,255,255,.02) 12px 24px),var(--navy-2);aspect-ratio:16/9;display:grid;place-items:center;text-align:center;position:relative;}
+.vsl .play{width:74px;height:74px;border-radius:50%;background:var(--wine);display:grid;place-items:center;box-shadow:0 14px 40px -10px rgba(0,0,0,.6);transition:transform .25s;}
+.vsl:hover .play{transform:scale(1.06);}
+.vsl .play:after{content:"";border-style:solid;border-width:13px 0 13px 22px;border-color:transparent transparent transparent #fff;margin-left:5px;}
+.vsl .tag{position:absolute;bottom:14px;font-family:var(--font-body);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.5);}
+.vsl-unmute{position:absolute;inset:0;z-index:3;width:100%;height:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(44,32,23,.42);border:none;cursor:pointer;color:#fff;font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.88rem;transition:background .25s,opacity .3s;}
+.vsl-unmute .ic{font-size:1.4rem;line-height:1;}
+.vsl-unmute:hover{background:rgba(44,32,23,.56);}
+.vsl-unmute.hide{opacity:0;pointer-events:none;}
+.vsl-speed{margin-top:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.vsl-speed .lbl{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#a3957f;font-family:var(--font-display);font-weight:600;margin-right:2px;}
+.vsl-speed button{font-family:var(--font-display);font-weight:700;font-size:.76rem;padding:.42em .8em;border-radius:3px;cursor:pointer;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);color:#e6dccb;transition:.2s;}
+.vsl-speed button:hover{background:rgba(255,255,255,.12);}
+.vsl-speed button.on{background:var(--gold);border-color:var(--gold);color:var(--navy);}
+video::-webkit-media-controls-timeline{display:none !important}
+video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-seek-forward-button{display:none !important}
+
+/* pain / narrative blocks */
+.story{background:var(--paper);}
+.story p{margin-top:1.1em;color:#4a4036;font-size:1.05rem;}
+.story p:first-child{margin-top:0;}
+.story .accent{margin-top:1.4em;font-family:var(--font-serif);font-style:italic;font-size:1.5rem;color:var(--wine);line-height:1.35;}
+.story .btn{margin-top:28px;}
+.story.alt{background:var(--cream);}
+
+/* marquee */
+.marquee{background:var(--wine);color:#fff;overflow:hidden;padding:20px 0;border-block:1px solid rgba(255,255,255,.12);}
+.marquee.gold{background:var(--gold);color:var(--navy);}
+.marquee .track{display:flex;width:max-content;animation:scroll 38s linear infinite;}
+.marquee .track span{font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(1rem,1.8vw,1.35rem);padding:0 28px;display:inline-flex;align-items:center;gap:28px;white-space:nowrap;}
+.marquee .track span:after{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.5;}
+@keyframes scroll{to{transform:translateX(-50%);}}
+
+/* who */
+.who{background:var(--cream);}
+.who .roles{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+.who .role{font-family:var(--font-display);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem;padding:.7em 1.1em;background:#fff;border:1px solid var(--line);border-radius:2px;color:var(--navy);}
+.who p{margin-top:1.1em;color:#4a4036;font-size:1.02rem;max-width:70ch;}
+.proof-slot{margin-top:30px;padding:26px 28px;border:1px dashed rgba(44,32,23,.25);border-radius:6px;background:rgba(255,255,255,.5);color:var(--muted);font-size:.85rem;letter-spacing:.02em;text-align:center;}
+
+/* about */
+.about{background:var(--navy);color:#fff;overflow:hidden;}
+.about:before{content:"";position:absolute;inset:0;background:radial-gradient(90% 80% at 90% 0%,rgba(109,31,51,.35),transparent 55%);}
+.about .grid{position:relative;display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center;}
+.about-photo{position:relative;}
+.about-photo .frame{border-radius:6px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);}
+.about-photo .frame img{width:100%;object-fit:cover;aspect-ratio:3/3.7;}
+.about-photo .gold-edge{position:absolute;inset:-14px;border:1px solid var(--gold);border-radius:10px;}
+.about .name{font-family:var(--font-serif);font-style:italic;font-weight:600;font-size:clamp(2.2rem,4vw,3rem);color:var(--gold-soft);line-height:1;}
+.about .role-line{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;color:#c6b9a6;margin-top:10px;}
+.about p{margin-top:1.1em;color:#e6dccb;max-width:56ch;}
+.about p:first-of-type{margin-top:26px;}
+.about .quote{font-family:var(--font-serif);font-style:italic;font-size:1.5rem;color:#fff;border-left:2px solid var(--gold);padding-left:22px;margin-top:28px;}
+.about .btn{margin-top:26px;}
+
+/* metodo (fases) */
+.metodo{background:var(--paper);}
+.metodo p.lead{max-width:66ch;color:#4a4036;margin-top:18px;}
+.fases{margin-top:44px;display:grid;gap:14px;}
+.fase{display:grid;grid-template-columns:96px 1fr;gap:24px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:5px;padding:26px 30px;transition:.3s;}
+.fase:hover{border-color:var(--gold);box-shadow:0 24px 50px -30px rgba(44,32,23,.4);transform:translateY(-2px);}
+.fase .num{font-family:var(--font-display);font-weight:800;font-size:2.6rem;color:var(--cream);-webkit-text-stroke:1.5px var(--gold);line-height:1;text-align:center;}
+.fase h3{font-weight:800;text-transform:uppercase;font-size:1.1rem;color:var(--navy);letter-spacing:0;}
+.fase p{margin-top:8px;color:#4f4539;font-size:.98rem;}
+.metodo .closing{margin-top:40px;font-family:var(--font-serif);font-style:italic;font-size:clamp(1.3rem,2.3vw,1.7rem);color:var(--wine);max-width:60ch;line-height:1.4;}
+
+/* modulos */
+.modulos{background:var(--cream);}
+.mod-list{margin-top:38px;display:grid;gap:12px;max-width:820px;}
+.mod-list .it{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:4px;padding:16px 20px;font-weight:600;color:var(--navy);}
+.mod-list .it .ck{flex:none;width:22px;height:22px;border-radius:50%;background:var(--wine);display:grid;place-items:center;}
+.mod-list .it .ck:after{content:"";width:6px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-1px);}
+.bonus-card{margin-top:16px;max-width:820px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:28px 30px;position:relative;overflow:hidden;}
+.bonus-card:before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--gold),var(--wine));}
+.bonus-card .tagb{font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.7rem;color:var(--wine);}
+.bonus-card h3{margin-top:12px;font-weight:800;font-size:1.15rem;text-transform:none;color:var(--navy);line-height:1.3;}
+.bonus-card p{margin-top:10px;color:#4f4539;font-size:.98rem;}
+
+/* preview video */
+.preview{background:var(--paper);}
+.preview .box{border:1px solid rgba(255,255,255,.14);border-radius:6px;overflow:hidden;background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 14px,rgba(255,255,255,.02) 14px 28px),var(--navy);aspect-ratio:16/8;display:grid;place-items:center;text-align:center;position:relative;margin-top:0;}
+.preview .box .play{width:84px;height:84px;border-radius:50%;background:var(--wine);display:grid;place-items:center;box-shadow:0 14px 40px -10px rgba(0,0,0,.6);}
+.preview .box .play:after{content:"";border-style:solid;border-width:15px 0 15px 25px;border-color:transparent transparent transparent #fff;margin-left:6px;}
+.preview .box .tag{position:absolute;bottom:18px;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.5);}
+.preview .center-cta{margin-top:34px;text-align:center;}
+
+/* pricing */
+.pricing{background:var(--navy);color:#fff;overflow:hidden;}
+.pricing:before{content:"";position:absolute;inset:0;background:radial-gradient(80% 90% at 50% 0%,rgba(61,44,30,.92),transparent 60%);}
+.pricing .inner{position:relative;max-width:760px;margin:0 auto;text-align:center;}
+.pricing p.intro{color:#e6dccb;margin-top:22px;}
+.price-card{margin-top:40px;background:linear-gradient(180deg,#fff,var(--cream));color:var(--navy);border-radius:10px;padding:clamp(34px,5vw,52px);box-shadow:0 50px 90px -40px rgba(0,0,0,.7);border:1px solid var(--gold);position:relative;}
+.price-card .seal{display:inline-flex;align-items:center;gap:9px;background:var(--navy);color:var(--gold-soft);font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.7rem;padding:.7em 1.3em;border-radius:40px;}
+.price-card .seal .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);}
+.price-card .from{margin-top:26px;font-family:var(--font-display);font-weight:600;font-size:1.3rem;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--wine);}
+.price-card .x{font-family:var(--font-display);font-weight:800;line-height:1;margin-top:10px;}
+.price-card .x .small{font-size:1.1rem;color:var(--muted);}
+.price-card .x .big{font-size:clamp(2.6rem,6vw,4rem);color:var(--wine);}
+.price-card .cash{font-family:var(--font-body);font-size:1.05rem;color:#4a4036;margin-top:14px;}
+.price-card .cash b{color:var(--navy);}
+.price-card .btn{margin-top:30px;}
+.price-card .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:24px;color:var(--muted);font-size:.82rem;}
+.price-card .trust span{display:inline-flex;align-items:center;gap:7px;}
+.price-card .trust span:before{content:"";width:14px;height:14px;border-radius:50%;border:1.5px solid var(--gold);display:inline-block;}
+
+/* guarantee */
+.guarantee{background:var(--paper);}
+.guarantee .grid{display:grid;grid-template-columns:200px 1fr;gap:46px;align-items:center;}
+.gbadge{width:200px;height:200px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;text-align:center;background:#fff;box-shadow:0 30px 60px -30px rgba(194,160,98,.6);}
+.gbadge .num{font-family:var(--font-display);font-weight:900;font-size:4rem;color:var(--wine);line-height:.9;}
+.gbadge .d{font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.2em;font-size:.7rem;color:var(--navy);margin-top:4px;}
+.guarantee h2{font-size:clamp(1.7rem,3vw,2.4rem);}
+.guarantee p{margin-top:16px;color:#4a4036;max-width:60ch;}
+.guarantee .btn{margin-top:26px;}
+
+/* faq */
+.faq{background:var(--cream);}
+.faq .list{margin-top:40px;border-top:1px solid var(--line);}
+.faq .item{border-bottom:1px solid var(--line);}
+.faq .q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:26px 56px 26px 0;position:relative;font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--navy);}
+.faq .q:after{content:"";position:absolute;right:8px;top:50%;width:14px;height:14px;border-right:2px solid var(--wine);border-bottom:2px solid var(--wine);transform:translateY(-65%) rotate(45deg);transition:transform .3s;}
+.faq .item.open .q:after{transform:translateY(-35%) rotate(-135deg);}
+.faq .a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.faq .a p{padding:0 56px 26px 0;color:#4f4539;}
+.faq .item.open .a{max-height:400px;}
+
+/* final */
+.final{background:var(--navy);color:#fff;text-align:center;overflow:hidden;}
+.final:before{content:"";position:absolute;inset:0;background:radial-gradient(70% 90% at 50% 100%,rgba(109,31,51,.4),transparent 60%);}
+.final .inner{position:relative;max-width:760px;margin:0 auto;}
+.final h2{font-size:clamp(2rem,4.5vw,3.2rem);text-transform:none;}
+.final .btn{margin-top:36px;}
+
+.foot{background:#1f1710;color:#9d8f7c;padding:40px 0;text-align:center;font-size:.8rem;}
+.foot .brand{justify-content:center;margin-bottom:14px;}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media(max-width:920px){
+  .hero{display:flex;flex-direction:column;}
+  .hero .wrap{order:2;min-height:0;display:block;padding-top:36px;padding-bottom:48px;}
+  .hero-text{width:100%;max-width:none;}
+  .hero-bg{order:1;position:relative;width:100%;height:clamp(340px,54vh,480px);}
+  .hero-bg img{object-position:center 18%;}
+  .hero-bg:before{background:linear-gradient(0deg,var(--navy) 0%,rgba(13,26,43,.35) 40%,rgba(13,26,43,.15) 100%);}
+  .hero-bg:after{display:none;}
+  .hero-bg .chip{left:20px;bottom:20px;}
+  .about .grid{grid-template-columns:1fr;gap:40px;}
+  .about-photo{max-width:380px;margin:0 auto;}
+  .fase{grid-template-columns:64px 1fr;gap:16px;padding:22px;}
+  .fase .num{font-size:2rem;}
+  .guarantee .grid{grid-template-columns:1fr;justify-items:center;text-align:center;}
+  .guarantee p{margin-inline:auto;}
+}
+@media(max-width:640px){
+  .vsl-speed{display:none;}
+}
+@media(max-width:520px){
+  .wrap,.narrow{padding:0 20px;}
+  .story.center-narrow{padding:0 20px;}
+  .price-card .x .big{font-size:2.05rem;}
+  .price-card .x .small{display:block;font-size:.95rem;}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#topo">
+      <span class="seal">VS</span>
+      <span><b>Victoria Salgueiro</b><span>Cidadania Europeia</span></span>
+    </a>
+    <a class="btn" href="#oferta">Conhecer a mentoria</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="hero-bg">
+    <img src="assets/victoria-hero.jpg" alt="Victoria Salgueiro" />
+    <div class="chip"><b>+8</b><span>anos no mercado</span></div>
+  </div>
+  <div class="wrap">
+    <div class="hero-text">
+      <span class="kicker">Mentoria Passaporte Carreira Internacional</span>
+      <h1>Construa uma carreira lucrativa prestando assessoria em cidadania europeia, mesmo sem experiência prévia, trabalhando de casa e recebendo honorários em euro.</h1>
+
+      <div class="vsl" id="vslWrap">
+        <!-- TODO: substituir por assets/victoria-mentoria-vsl.mp4 quando o vídeo estiver pronto -->
+        <video id="vslVideo" src="assets/victoria-mentoria-vsl.mp4" poster="assets/victoria-hero.jpg" muted playsinline controls preload="metadata" style="width:100%;height:100%;object-fit:cover;background:#000"></video>
+        <button class="vsl-unmute" id="vslUnmute" type="button" aria-label="Ativar som">
+          <svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/><path d="M16 8a5 5 0 0 1 0 8M18.5 5.5a9 9 0 0 1 0 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+          Toque para ativar o som
+        </button>
+      </div>
+      <div class="vsl-speed" id="vslSpeed" aria-label="Velocidade de reprodução">
+        <span class="lbl">Velocidade</span>
+        <button type="button" data-rate="0.75">0.75x</button>
+        <button type="button" data-rate="1" class="on">1x</button>
+        <button type="button" data-rate="1.25">1.25x</button>
+        <button type="button" data-rate="1.5">1.5x</button>
+        <button type="button" data-rate="2">2x</button>
+      </div>
+
+      <p class="sub lead">A Mentoria Passaporte Carreira Internacional é a formação completa para profissionais que querem ingressar em um dos mercados mais lucrativos e menos explorados do Brasil. Com método validado, encontros ao vivo mensais e a orientação de quem opera ativamente há mais de 8 anos.</p>
+
+      <div class="cta-row">
+        <a class="btn big" href="#oferta">Quero conhecer a mentoria <span class="arr">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY / DOR -->
+<section class="story pad">
+  <div class="narrow reveal">
+    <p>Você se formou acreditando que a sua profissão te levaria mais longe.</p>
+    <p>Estudou. Se dedicou. Talvez tenha feito uma pós, uma especialização, cursos extras. E, no fundo, sempre teve a expectativa de que tudo isso ia se converter em uma carreira sólida, em reconhecimento e em uma vida financeira diferente da que você tinha quando começou.</p>
+    <p>Só que a realidade chegou de um jeito diferente do esperado.</p>
+    <p>O salário não acompanha o que você sabe.</p>
+    <p>A profissão paga abaixo do que você imaginava.</p>
+    <p>Você depende de um chefe que decide o seu horário, do humor do dia, do ritmo de outra pessoa.</p>
+    <p>E aquela vontade de ter algo próprio continua ali, mas sem caminho claro.</p>
+    <p>Pior: você começa a ver gente da sua área construindo coisas interessantes. Profissionais que, em pouco tempo, estão atendendo clientes próprios, trabalhando de casa, com uma estrutura que parece distante da sua realidade. E aquela sensação de estar ficando para trás começa a pesar.</p>
+    <p class="accent">Existe um caminho. Mas não é o caminho que a faculdade te ensinou, porque faculdade não ensina profissões. Ou você cria a sua, ou trabalha para os outros pelo resto da vida.</p>
+    <p>E o caminho que eu vou te mostrar aqui é um dos mais lucrativos, valorizados e pouco explorados do Brasil. Um caminho real, com clientes reais, em um mercado que cresce todos os anos.</p>
+    <a class="btn" href="#quem-pode">Quero conhecer esse caminho <span class="arr">&rarr;</span></a>
+  </div>
+</section>
+
+<!-- MERCADO -->
+<section class="story alt pad">
+  <div class="narrow reveal">
+    <p>A cidadania europeia se tornou um assunto presente na vida de milhares de famílias brasileiras.</p>
+    <p>A demanda por profissionais qualificados para conduzir esses processos cresce, e o número de pessoas realmente preparadas para atender não acompanha.</p>
+    <p>Esse descompasso cria um espaço enorme para quem decide entrar com seriedade. Um mercado com alta demanda, pouca concorrência qualificada e a possibilidade de cobrar honorários em euro.</p>
+    <p>A diferença entre quem está dentro e quem está fora desse mercado, na maior parte das vezes, é simples: quem está dentro teve acesso ao caminho. Quem está fora ainda não.</p>
+  </div>
+</section>
+
+<!-- MARQUEE 1 -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Carreira internacional</span><span>+ Clientes próprios</span><span>+ Honorários em euro</span><span>+ Liberdade de horário</span><span>+ Trabalho remoto</span><span>+ Autoridade na área</span><span>&ndash; Depender de chefe</span><span>&ndash; Salário travado</span><span>&ndash; Estagnação</span>
+    <span>Carreira internacional</span><span>+ Clientes próprios</span><span>+ Honorários em euro</span><span>+ Liberdade de horário</span><span>+ Trabalho remoto</span><span>+ Autoridade na área</span><span>&ndash; Depender de chefe</span><span>&ndash; Salário travado</span><span>&ndash; Estagnação</span>
+  </div>
+</div>
+
+<!-- QUEM PODE -->
+<section class="who pad" id="quem-pode">
+  <div class="wrap">
+    <div class="reveal">
+      <h2 style="color:var(--navy)">Esse mercado não é exclusivo de advogado.</h2>
+      <p>O processo de cidadania europeia é feito de várias etapas, e várias delas dependem de habilidades que você provavelmente já tem.</p>
+      <p>Historiadores, genealogistas, contadores, pesquisadores, bacharéis em letras, professores, estudantes de direito, advogados iniciantes, profissionais de áreas administrativas. Existe lugar para muito mais gente do que se imagina, desde que a pessoa esteja disposta a aprender a fazer bem feito.</p>
+      <div class="roles">
+        <span class="role">Historiadores</span>
+        <span class="role">Genealogistas</span>
+        <span class="role">Contadores</span>
+        <span class="role">Pesquisadores</span>
+        <span class="role">Bacharéis em Letras</span>
+        <span class="role">Professores</span>
+        <span class="role">Estudantes de Direito</span>
+        <span class="role">Advogados iniciantes</span>
+        <span class="role">Áreas administrativas</span>
+      </div>
+      <div class="proof-slot">Espaço para dados, matérias ou prints sobre o crescimento da procura por cidadania europeia no Brasil</div>
+      <p>E aqui vai o que quase ninguém comenta: esse é um dos poucos mercados em que o seu trabalho é pago em euro, com honorários iniciais que você recebe antes mesmo da conclusão do processo. Você não precisa esperar o resultado para ser remunerada. A sua entrega é técnica, etapa por etapa, e a sua remuneração acompanha o serviço.</p>
+      <a class="btn" href="#sobre" style="margin-top:10px">Quero entrar nesse mercado <span class="arr">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about pad" id="sobre">
+  <div class="wrap">
+    <div class="grid">
+      <div class="about-photo reveal">
+        <div class="gold-edge"></div>
+        <div class="frame"><img src="assets/victoria-sobre.jpg" alt="Victoria Salgueiro" /></div>
+      </div>
+      <div class="reveal">
+        <span class="kicker">Antes de continuar, deixa eu me apresentar</span>
+        <div class="name" style="margin-top:16px">Victoria Salgueiro</div>
+        <div class="role-line">Advogada, formação e especialização na Europa</div>
+        <p>Sou a Victoria Salgueiro, advogada com formação e especialização na Europa, e há mais de 8 anos opero ativamente um escritório de cidadania europeia. Diferente da maioria dos profissionais da área, que se limitam à cidadania italiana, eu trabalho com portuguesa, italiana, alemã e austríaca, incluindo casos delicados como descendentes de famílias que sofreram perseguição durante a Segunda Guerra.</p>
+        <p>Conheci o meu marido por causa do processo de cidadania da família dele. Esse universo não é só a minha profissão, é também a minha vida pessoal e a construção da minha família.</p>
+        <p>Quando comecei a trabalhar com cidadania, percebi uma coisa que me incomodou e que me incomoda até hoje: o mercado não tinha um fluxo seguro e padronizado. Muitos profissionais pulavam etapas. Iniciavam processos sem confirmar viabilidade. Erravam no preenchimento de formulários por falta de orientação técnica. E quem pagava a conta no fim era o cliente.</p>
+        <p>Aprendi na prática, caso a caso, que existe uma sequência lógica que protege tanto o cliente quanto o profissional. Com o tempo, sistematizei essa sequência em 7 fases, e hoje ela é o protocolo de todos os processos do meu escritório.</p>
+        <p>Esse é o método que eu vou te ensinar dentro da mentoria.</p>
+        <p class="quote">Não é teoria de faculdade. Não é curso genérico de empreendedorismo. É o caminho que funciona, ensinado por quem está dentro do mercado todos os dias.</p>
+        <a class="btn gold" href="#metodo">Quero aprender esse método <span class="arr">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METODO -->
+<section class="metodo pad" id="metodo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker dark">O método</span>
+      <h2 style="margin-top:18px;color:var(--navy)">O Método Passaporte Seguro</h2>
+    </div>
+    <p class="lead reveal">São 7 fases sequenciais que conduzem um processo de cidadania europeia do início ao fim com segurança técnica e jurídica. Esse método foi construído para eliminar os dois maiores riscos do mercado: avançar sem viabilidade real confirmada e errar no preenchimento de documentos, o que pode travar ou inviabilizar todo o processo.</p>
+    <div class="fases">
+      <div class="fase reveal"><div class="num">1</div><div><h3>Reconstrução Genealógica</h3><p>Antes de qualquer análise, você aprende a mapear a linhagem do cliente. Identifica o ancestral imigrante, as gerações intermediárias e os vínculos documentais necessários. Sem essa base, qualquer análise de viabilidade é incompleta.</p></div></div>
+      <div class="fase reveal"><div class="num">2</div><div><h3>Análise de Viabilidade Preliminar</h3><p>Com a árvore em mãos, você analisa as regras de transmissão da cidadania pretendida e verifica se o cliente tem direito. Essa etapa evita que ele gaste tempo e dinheiro em um processo inviável.</p></div></div>
+      <div class="fase reveal"><div class="num">3</div><div><h3>Busca de Documentos</h3><p>Você aprende o que buscar, onde buscar e como solicitar. Cartórios brasileiros, arquivos históricos e, quando necessário, fontes europeias. Essa fase exige método e conhecimento específico.</p></div></div>
+      <div class="fase reveal"><div class="num">4</div><div><h3>Dupla Análise Técnica</h3><p>Com a documentação completa, você faz uma segunda análise, agora com base nas informações reais e verificadas. Essa dupla checagem é o diferencial de segurança do método. Só se avança para a montagem do processo depois de confirmar a viabilidade com documentação concreta.</p></div></div>
+      <div class="fase reveal"><div class="num">5</div><div><h3>Guia de Preenchimento de Formulários</h3><p>Uma das etapas mais críticas e menos ensinadas no mercado. Erros nessa fase podem gerar exigências, atrasos ou indeferimento. Você aprende a preencher com atenção técnica e seguindo os padrões exigidos pela autoridade competente de cada país.</p></div></div>
+      <div class="fase reveal"><div class="num">6</div><div><h3>Encaminhamento à Europa</h3><p>A documentação organizada, apostilada e traduzida quando necessário é encaminhada às autoridades europeias competentes. O cliente não precisa se preocupar com a logística do envio ou com o comparecimento em consulado.</p></div></div>
+      <div class="fase reveal"><div class="num">7</div><div><h3>Acompanhamento e Finalização</h3><p>Você acompanha o processo até a decisão final, responde a exigências e ofícios com celeridade e orienta o cliente sobre como solicitar o primeiro passaporte europeu.</p></div></div>
+    </div>
+    <p class="closing reveal">Esse é o protocolo que conduziu dezenas de famílias reais até a conquista da cidadania, e é exatamente o que você vai aprender a aplicar dentro da mentoria.</p>
+    <div class="reveal" style="margin-top:30px"><a class="btn" href="#modulos">Quero aplicar esse método <span class="arr">&rarr;</span></a></div>
+  </div>
+</section>
+
+<!-- MODULOS -->
+<section class="modulos pad" id="modulos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker dark">Módulos</span>
+      <h2 style="margin-top:18px;color:var(--navy)">O que você encontra dentro da mentoria</h2>
+    </div>
+    <div class="mod-list reveal">
+      <div class="it"><span class="ck"></span>Módulo 0 | Boas-vindas e orientações</div>
+      <div class="it"><span class="ck"></span>Módulo 1 | O mercado</div>
+      <div class="it"><span class="ck"></span>Módulo 2 | Base técnica I: Cidadania Portuguesa</div>
+      <div class="it"><span class="ck"></span>Módulo 3 | Base técnica II: Cidadania Italiana</div>
+      <div class="it"><span class="ck"></span>Módulo 4 | Base técnica III: Cidadania Alemã</div>
+      <div class="it"><span class="ck"></span>Módulo 5 | Genealogia aplicada</div>
+      <div class="it"><span class="ck"></span>Módulo 6 | Triagem e análise de caso</div>
+      <div class="it"><span class="ck"></span>Módulo 7 | Estrutura do negócio</div>
+      <div class="it"><span class="ck"></span>Módulo 8 | Captação de clientes</div>
+      <div class="it"><span class="ck"></span>Módulo 9 | Casos práticos e erros comuns</div>
+    </div>
+    <div class="bonus-card reveal">
+      <div class="tagb">Bônus | Outras cidadanias</div>
+      <h3>Como verificar as regras de viabilidade de outros tipos de cidadania para estruturar um processo de forma segura: polonesa, tcheca, espanhola, luxemburguesa e outras.</h3>
+    </div>
+    <div class="reveal" style="margin-top:30px"><a class="btn" href="#oferta">Quero acessar a mentoria completa <span class="arr">&rarr;</span></a></div>
+  </div>
+</section>
+
+<!-- PREVIEW (bastidores) -->
+<section class="preview pad">
+  <div class="wrap reveal">
+    <div class="box" id="previewWrap">
+      <!-- TODO: substituir por assets/victoria-mentoria-bastidores.mp4 quando o vídeo estiver pronto -->
+      <span class="play"></span>
+      <span class="tag">Cenas das aulas e dos HotSeats</span>
+    </div>
+    <div class="center-cta"><a class="btn gold" href="#oferta">Quero ver a mentoria por dentro <span class="arr">&rarr;</span></a></div>
+  </div>
+</section>
+
+<!-- MARQUEE 2 -->
+<div class="marquee gold" aria-hidden="true">
+  <div class="track">
+    <span>Base técnica</span><span>Genealogia aplicada</span><span>Análise de viabilidade</span><span>Estrutura de negócio</span><span>Captação de clientes</span><span>Autoridade</span><span>Honorários em euro</span><span>Carreira internacional</span>
+    <span>Base técnica</span><span>Genealogia aplicada</span><span>Análise de viabilidade</span><span>Estrutura de negócio</span><span>Captação de clientes</span><span>Autoridade</span><span>Honorários em euro</span><span>Carreira internacional</span>
+  </div>
+</div>
+
+<!-- PRICING -->
+<section class="pricing pad" id="oferta">
+  <div class="wrap">
+    <div class="inner">
+      <span class="kicker">O investimento</span>
+      <h2 style="margin-top:18px;color:#fff">Quanto custa entrar na Mentoria Passaporte Carreira Internacional?</h2>
+      <p class="intro reveal">Aqui é importante a gente conversar com honestidade.</p>
+      <p class="intro reveal">A mentoria é uma formação completa. Ela não é uma aula introdutória, não é um material genérico. É o protocolo que o meu escritório usa em todos os processos, sistematizado e ensinado de forma que você possa replicar no seu próprio serviço.</p>
+      <p class="intro reveal">O investimento é de R$ 5.000.</p>
+      <p class="intro reveal">Esse valor reflete a profundidade do conteúdo, o acompanhamento ao vivo mensal por 6 meses, o acesso de 1 ano às gravações, os templates práticos, o material complementar e a possibilidade real de você construir uma carreira que se paga em poucos clientes.</p>
+      <p class="intro reveal">E como essa é uma turma exclusiva, eu preparei uma condição especial para os primeiros que decidirem entrar agora:</p>
+      <div class="price-card reveal">
+        <span class="seal"><span class="dot"></span>Condição para os primeiros da primeira turma</span>
+        <div class="from">De R$ 5.000</div>
+        <div class="x"><span class="small">Por</span> <span class="big">12x R$ 361,98</span></div>
+        <div class="cash">ou <b>R$ 3.500 à vista</b></div>
+        <a class="btn gold big block" href="https://pay.kiwify.com.br/VAp5bAS">Toque aqui para garantir sua vaga <span class="arr">&rarr;</span></a>
+        <div class="trust">
+          <span>Compra 100% segura</span>
+          <span>Privacidade protegida</span>
+          <span>Acesso imediato</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee pad">
+  <div class="wrap">
+    <div class="grid reveal">
+      <div class="gbadge">
+        <div>
+          <div class="num">7</div>
+          <div class="d">Dias de garantia</div>
+        </div>
+      </div>
+      <div>
+        <span class="kicker dark">Garantia incondicional</span>
+        <h2 style="margin-top:14px;color:var(--navy)">Garantia incondicional de 7 dias</h2>
+        <p>A sua decisão precisa ser tranquila.</p>
+        <p>Você pode entrar na mentoria, acessar o primeiro módulo, conhecer o material complementar e avaliar com calma se esse caminho faz sentido para a sua carreira. Se concluir que não é para você, é só solicitar o reembolso dentro de 7 dias e devolvemos 100% do valor investido.</p>
+        <p>Sem burocracia e sem perguntas.</p>
+        <a class="btn" href="#oferta">Toque aqui para testar por 7 dias <span class="arr">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq pad">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker dark">Perguntas frequentes</span>
+      <h2 style="margin-top:18px;color:var(--navy)">Ficou alguma dúvida?</h2>
+    </div>
+    <div class="list reveal" style="max-width:860px;margin-inline:auto">
+      <div class="item"><button class="q">O que é a Mentoria Passaporte Carreira Internacional?</button><div class="a"><p>É uma mentoria cíclica de 6 meses, com aulas gravadas em módulos curtos, encontros ao vivo mensais no formato HotSeat, material didático complementar e templates práticos. Ela forma profissionais para atuar no mercado de assessoria em cidadania europeia, com base técnica, método e estrutura de negócio.</p></div></div>
+      <div class="item"><button class="q">Isso é só para advogado?</button><div class="a"><p>Não. A mentoria é construída para advogados iniciantes, estudantes de direito, historiadores, genealogistas, contadores e profissionais de áreas afins. O Módulo 1 trata exatamente do perfil de quem pode atuar nesse mercado e como cada formação se encaixa.</p></div></div>
+      <div class="item"><button class="q">Eu preciso ter experiência prévia em cidadania?</button><div class="a"><p>Não. A mentoria foi pensada para começar do zero. Você aprende a base técnica de cada cidadania, a parte de genealogia, a análise de viabilidade e como estruturar o seu serviço, mesmo que esteja chegando agora na área.</p></div></div>
+      <div class="item"><button class="q">Eu preciso falar outro idioma?</button><div class="a"><p>Para os serviços que você vai aprender dentro da mentoria, não é um requisito. A mentoria aborda o que é exigido em cada etapa e cada tipo de cidadania, e você vai entender com clareza o que precisa para começar.</p></div></div>
+      <div class="item"><button class="q">Como funcionam os HotSeats?</button><div class="a"><p>São encontros ao vivo mensais, em formato de mentoria em grupo, onde você envia as suas dúvidas com antecedência por um formulário e recebe a resposta direta no encontro. Casos reais são analisados em conjunto, e você aprende também com as situações trazidas pelos outros mentorados.</p></div></div>
+      <div class="item"><button class="q">Por quanto tempo tenho acesso?</button><div class="a"><p>O ciclo da mentoria é de 6 meses, com participação nos 6 HotSeats a partir da contratação. O acesso às gravações é de 1 ano.</p></div></div>
+      <div class="item"><button class="q">Como funciona o suporte fora dos HotSeats?</button><div class="a"><p>O suporte é feito por e-mail e por um formulário onde você envia as suas dúvidas para serem tratadas nos HotSeats mensais.</p></div></div>
+      <div class="item"><button class="q">Quais são as formas de pagamento?</button><div class="a"><p>PIX, boleto ou cartão de crédito em até 12 vezes.</p></div></div>
+      <div class="item"><button class="q">E se eu quiser cancelar?</button><div class="a"><p>Você tem 7 dias após a compra para solicitar o reembolso, sem burocracia e sem perguntas. Devolvemos 100% do valor.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final pad">
+  <div class="wrap">
+    <div class="inner">
+      <span class="kicker">Sua próxima decisão</span>
+      <h2 style="margin-top:20px">O primeiro passo de uma carreira internacional começa agora.</h2>
+      <a class="btn gold big" href="https://pay.kiwify.com.br/VAp5bAS">Quero construir minha carreira internacional <span class="arr">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="#topo">
+      <span class="seal">VS</span>
+      <span><b style="color:#fff">Victoria Salgueiro</b><span>Cidadania Europeia</span></span>
+    </a>
+    <div>Mentoria Passaporte Carreira Internacional</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq .item').forEach(function(item){
+  item.querySelector('.q').addEventListener('click', function(){
+    var open = item.classList.contains('open');
+    document.querySelectorAll('.faq .item').forEach(function(i){i.classList.remove('open');});
+    if(!open) item.classList.add('open');
+  });
+});
+
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+(function(){
+  var v = document.getElementById('vslVideo');
+  if(!v) return;
+  var unmute = document.getElementById('vslUnmute');
+  var speed  = document.getElementById('vslSpeed');
+  if(unmute){
+    unmute.addEventListener('click', function(){
+      v.muted = false; v.volume = 1;
+      if(v.paused){ v.play().catch(function(){}); }
+      unmute.classList.add('hide');
+    });
+    v.addEventListener('volumechange', function(){
+      if(!v.muted){ unmute.classList.add('hide'); }
+    });
+  }
+  if(speed){
+    speed.addEventListener('click', function(e){
+      var b = e.target.closest('button[data-rate]');
+      if(!b) return;
+      v.playbackRate = parseFloat(b.getAttribute('data-rate'));
+      speed.querySelectorAll('button').forEach(function(x){ x.classList.remove('on'); });
+      b.classList.add('on');
+    });
+  }
+  var maxWatched = 0;
+  v.addEventListener('timeupdate', function(){
+    if(!v.seeking){ maxWatched = Math.max(maxWatched, v.currentTime); }
+  });
+  v.addEventListener('seeking', function(){
+    if(v.currentTime > maxWatched + 0.4){ v.currentTime = maxWatched; }
+  });
+})();
+</script>
+</body>
+</html>

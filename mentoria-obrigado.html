@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Obrigado | Mentoria Passaporte Carreira Internacional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy:#2c2017;
+  --navy-2:#3a2a1d;
+  --wine:#6d1f33;
+  --wine-2:#88283f;
+  --gold:#c2a062;
+  --gold-soft:#d8be8e;
+  --cream:#f3ede2;
+  --paper:#faf6ee;
+  --ink:#241b12;
+  --muted:#8a7c6c;
+  --line:rgba(44,32,23,.12);
+  --font-display:"Archivo",sans-serif;
+  --font-body:"Hanken Grotesk",sans-serif;
+  --font-serif:"Cormorant Garamond",serif;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+
+.kicker{font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;color:var(--gold);}
+h1,h2,h3{font-family:var(--font-display);line-height:1.08;letter-spacing:-.01em;}
+.serif{font-family:var(--font-serif);font-style:italic;}
+
+section{position:relative;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+.narrow{max-width:720px;margin:0 auto;padding:0 28px;}
+.pad{padding-block:clamp(64px,8vw,112px);}
+
+.btn{display:inline-flex;align-items:center;gap:.7em;font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.86rem;padding:1.15em 2.1em;border-radius:2px;cursor:pointer;border:none;background:var(--wine);color:#fff;transition:transform .25s ease,background .25s ease,box-shadow .25s ease;box-shadow:0 10px 30px -12px rgba(109,31,51,.65);}
+.btn:hover{background:var(--wine-2);transform:translateY(-2px);}
+.btn.block{display:flex;width:100%;justify-content:center;}
+.btn[disabled]{opacity:.5;cursor:not-allowed;transform:none;}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(44,32,23,.93);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);}
+.topbar .wrap{display:flex;align-items:center;justify-content:center;height:66px;}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;}
+.brand .seal{width:34px;height:34px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:var(--font-display);font-weight:800;font-size:.8rem;}
+.brand b{font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.18em;font-size:.82rem;}
+.brand span{display:block;font-size:.6rem;letter-spacing:.3em;color:var(--gold-soft);text-transform:uppercase;}
+
+/* intro */
+.top{background:var(--navy);color:#fff;overflow:hidden;}
+.top:before{content:"";position:absolute;inset:0;background:radial-gradient(110% 80% at 50% 0%,rgba(77,56,38,.85),transparent 60%),radial-gradient(80% 70% at 100% 100%,rgba(109,31,51,.3),transparent 55%);}
+.top .narrow{position:relative;text-align:center;}
+.top h1{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.8rem);letter-spacing:-.02em;margin-top:22px;text-transform:none;line-height:1.15;}
+.top p{margin-top:20px;color:#e6dccb;font-size:1.08rem;max-width:58ch;margin-inline:auto;}
+.top p.strong{margin-top:26px;font-family:var(--font-serif);font-style:italic;font-size:1.4rem;color:var(--gold-soft);}
+
+/* form */
+.form-section{background:var(--paper);}
+.form-card{max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:8px;padding:clamp(28px,4vw,48px);box-shadow:0 30px 70px -40px rgba(44,32,23,.35);}
+.field{margin-top:24px;}
+.field:first-child{margin-top:0;}
+.field label{display:block;font-family:var(--font-display);font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:10px;}
+.field input[type=text],
+.field input[type=tel],
+.field input[type=email],
+.field textarea{
+  width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:4px;
+  font-family:var(--font-body);font-size:1rem;color:var(--ink);background:var(--paper);
+  transition:border-color .2s;
+}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--gold);}
+.field textarea{min-height:100px;resize:vertical;}
+.options{display:grid;gap:10px;margin-top:2px;}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:border-color .2s,background .2s;}
+.opt:hover{border-color:var(--gold-soft);}
+.opt input{margin-top:3px;accent-color:var(--wine);flex:none;}
+.opt span{font-size:.98rem;color:#3a3128;}
+.opt.has-input{flex-direction:column;align-items:stretch;}
+.opt.has-input .opt-row{display:flex;align-items:flex-start;gap:12px;}
+.opt.has-input input[type=text]{margin-top:10px;width:100%;}
+.field.error input,.field.error textarea{border-color:var(--wine);}
+.field .err-msg{display:none;margin-top:8px;color:var(--wine);font-size:.82rem;font-weight:600;}
+.field.error .err-msg{display:block;}
+.submit-row{margin-top:34px;text-align:center;}
+.privacy-note{margin-top:14px;color:var(--muted);font-size:.8rem;text-align:center;}
+
+/* success state */
+#formStep{display:block;}
+#successStep{display:none;text-align:center;}
+#successStep .ck-big{width:64px;height:64px;border-radius:50%;background:var(--wine);display:grid;place-items:center;margin:0 auto;}
+#successStep .ck-big:after{content:"";width:16px;height:28px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg) translateY(-3px);}
+#successStep h2{margin-top:26px;font-weight:800;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--navy);text-transform:none;}
+#successStep p{margin-top:16px;color:#4a4036;font-size:1.05rem;}
+
+.foot{background:#1f1710;color:#9d8f7c;padding:40px 0;text-align:center;font-size:.8rem;}
+.foot .brand{justify-content:center;margin-bottom:14px;}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media(max-width:520px){
+  .wrap,.narrow{padding:0 20px;}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#topo">
+      <span class="seal">VS</span>
+      <span><b>Victoria Salgueiro</b><span>Cidadania Europeia</span></span>
+    </a>
+  </div>
+</header>
+
+<section class="top pad" id="topo">
+  <div class="narrow">
+    <span class="kicker">Formulário de interesse | Acompanhamento próximo</span>
+    <h1>Que bom ter você por aqui.</h1>
+    <p>Estou pensando em estruturar um próximo passo, mais exclusivo, para profissionais que querem ir além da mentoria.</p>
+    <p>Ainda não tenho data de abertura, nem formato fechado.</p>
+    <p class="strong">O que eu quero é montar essa primeira turma a partir das pessoas que responderem a este formulário.</p>
+    <p>Leva menos de 2 minutos. E, quando as vagas abrirem, você vai ser uma das primeiras pessoas a saber.</p>
+  </div>
+</section>
+
+<section class="form-section pad">
+  <div class="wrap">
+
+    <form id="formStep" class="form-card reveal" novalidate>
+
+      <div class="field">
+        <label for="nome">Qual é o seu nome completo?</label>
+        <input type="text" id="nome" name="nome" required />
+        <div class="err-msg">Preencha o seu nome completo.</div>
+      </div>
+
+      <div class="field">
+        <label for="whatsapp">Qual é o seu melhor WhatsApp?</label>
+        <input type="tel" id="whatsapp" name="whatsapp" required />
+        <div class="err-msg">Preencha um WhatsApp válido.</div>
+      </div>
+
+      <div class="field">
+        <label for="email">E o seu melhor e-mail?</label>
+        <input type="email" id="email" name="email" required />
+        <div class="err-msg">Preencha um e-mail válido.</div>
+      </div>
+
+      <div class="field" data-group="atuacao">
+        <label>Qual é a sua atuação profissional hoje?</label>
+        <div class="options">
+          <label class="opt"><input type="radio" name="atuacao" value="Advogado(a) ou estudante de direito" required><span>Advogado(a) ou estudante de direito</span></label>
+          <label class="opt"><input type="radio" name="atuacao" value="Historiador(a), genealogista ou pesquisador(a)"><span>Historiador(a), genealogista ou pesquisador(a)</span></label>
+          <label class="opt"><input type="radio" name="atuacao" value="Contador(a) ou profissional de área administrativa"><span>Contador(a) ou profissional de área administrativa</span></label>
+          <label class="opt"><input type="radio" name="atuacao" value="Já atuo com cidadania europeia"><span>Já atuo com cidadania europeia</span></label>
+          <label class="opt has-input">
+            <div class="opt-row"><input type="radio" name="atuacao" value="Outra"><span>Outra área:</span></div>
+            <input type="text" name="atuacao_outra" placeholder="Qual?">
+          </label>
+        </div>
+        <div class="err-msg">Selecione uma opção.</div>
+      </div>
+
+      <div class="field" data-group="experiencia">
+        <label>Qual é a sua experiência com cidadania europeia até aqui?</label>
+        <div class="options">
+          <label class="opt"><input type="radio" name="experiencia" value="Nunca atuei na área, quero começar" required><span>Nunca atuei na área, quero começar</span></label>
+          <label class="opt"><input type="radio" name="experiencia" value="Já estudei o tema, mas nunca atendi um cliente"><span>Já estudei o tema, mas nunca atendi um cliente</span></label>
+          <label class="opt"><input type="radio" name="experiencia" value="Já atendi entre 1 e 5 clientes"><span>Já atendi entre 1 e 5 clientes</span></label>
+          <label class="opt"><input type="radio" name="experiencia" value="Já atendi mais de 5 clientes"><span>Já atendi mais de 5 clientes</span></label>
+        </div>
+        <div class="err-msg">Selecione uma opção.</div>
+      </div>
+
+      <div class="field" data-group="modelo">
+        <label>Como você trabalha hoje?</label>
+        <div class="options">
+          <label class="opt"><input type="radio" name="modelo" value="Ainda não atuo na área, quero construir isso do zero" required><span>Ainda não atuo na área, quero construir isso do zero</span></label>
+          <label class="opt"><input type="radio" name="modelo" value="Atuo por conta própria, de forma autônoma"><span>Atuo por conta própria, de forma autônoma</span></label>
+          <label class="opt"><input type="radio" name="modelo" value="Faço parte de um escritório ou equipe"><span>Faço parte de um escritório ou equipe</span></label>
+        </div>
+        <div class="err-msg">Selecione uma opção.</div>
+      </div>
+
+      <div class="field" data-group="rede">
+        <label>Quantas pessoas ao seu redor você conhece hoje que buscam ou poderiam buscar a cidadania europeia? (familiares, amigos, conhecidos ou clientes)</label>
+        <div class="options">
+          <label class="opt"><input type="radio" name="rede" value="Nenhuma por enquanto" required><span>Nenhuma por enquanto</span></label>
+          <label class="opt"><input type="radio" name="rede" value="De 1 a 3 pessoas"><span>De 1 a 3 pessoas</span></label>
+          <label class="opt"><input type="radio" name="rede" value="De 4 a 10 pessoas"><span>De 4 a 10 pessoas</span></label>
+          <label class="opt"><input type="radio" name="rede" value="Mais de 10 pessoas"><span>Mais de 10 pessoas</span></label>
+        </div>
+        <div class="err-msg">Selecione uma opção.</div>
+      </div>
+
+      <div class="field">
+        <label for="desafio">Qual é o seu maior desafio ou a sua maior dúvida hoje quando pensa em construir uma carreira na assessoria em cidadania europeia?</label>
+        <textarea id="desafio" name="desafio" required></textarea>
+        <div class="err-msg">Conte um pouco sobre o seu desafio.</div>
+      </div>
+
+      <div class="field" data-group="formato">
+        <label>Se a Victoria abrir esse acompanhamento mais próximo, qual formato faria mais sentido para você?</label>
+        <div class="options">
+          <label class="opt"><input type="radio" name="formato" value="Encontros em grupo (quinzenais ou mensais)" required><span>Encontros em grupo (quinzenais ou mensais)</span></label>
+          <label class="opt"><input type="radio" name="formato" value="Acompanhamento individual para os seus casos"><span>Acompanhamento individual para os seus casos</span></label>
+          <label class="opt"><input type="radio" name="formato" value="Uma combinação dos dois"><span>Uma combinação dos dois</span></label>
+          <label class="opt"><input type="radio" name="formato" value="Ainda não sei, depende do investimento"><span>Ainda não sei, depende do investimento</span></label>
+        </div>
+        <div class="err-msg">Selecione uma opção.</div>
+      </div>
+
+      <div class="submit-row">
+        <button type="submit" class="btn block">Enviar respostas</button>
+        <p class="privacy-note">Suas respostas são usadas apenas para organizar esse próximo passo. Sem spam.</p>
+      </div>
+    </form>
+
+    <div id="successStep" class="form-card">
+      <div class="ck-big"></div>
+      <h2>Pronto, recebi as suas respostas.</h2>
+      <p>Assim que esse acompanhamento sair do papel, você vai ser avisado em primeira mão.</p>
+      <p>Enquanto isso, aproveite a mentoria com calma. Tudo o que você precisa para dar os primeiros passos já está liberado na sua área.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="#topo">
+      <span class="seal">VS</span>
+      <span><b style="color:#fff">Victoria Salgueiro</b><span>Cidadania Europeia</span></span>
+    </a>
+    <div>Mentoria Passaporte Carreira Internacional</div>
+  </div>
+</footer>
+
+<script>
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.1, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+/* Validação simples + troca para estado de sucesso.
+   Destino do envio (planilha, CRM, webhook, e-mail) ainda não foi definido — ver com a Victoria. */
+var form = document.getElementById('formStep');
+form.addEventListener('submit', function(ev){
+  ev.preventDefault();
+  var valid = true;
+
+  document.querySelectorAll('.field').forEach(function(f){ f.classList.remove('error'); });
+
+  ['nome','whatsapp','email','desafio'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(!el.value.trim()){
+      el.closest('.field').classList.add('error');
+      valid = false;
+    }
+  });
+
+  document.querySelectorAll('.field[data-group]').forEach(function(f){
+    var name = f.getAttribute('data-group');
+    var checked = form.querySelector('input[name="'+name+'"]:checked');
+    if(!checked){
+      f.classList.add('error');
+      valid = false;
+    }
+  });
+
+  if(!valid){
+    var firstError = form.querySelector('.field.error');
+    if(firstError) firstError.scrollIntoView({behavior:'smooth', block:'center'});
+    return;
+  }
+
+  form.style.display = 'none';
+  document.getElementById('successStep').style.display = 'block';
+  document.getElementById('successStep').scrollIntoView({behavior:'smooth', block:'start'});
+});
+</script>
+</body>
+</html>
