@@ -196,7 +196,7 @@ video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-see
 .fases{margin-top:44px;display:grid;gap:14px;}
 .fase{display:grid;grid-template-columns:96px 1fr;gap:24px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 28px -22px rgba(44,32,23,.3);padding:26px 30px;transition:.3s;}
 .fase:hover{border-color:var(--gold);box-shadow:0 24px 50px -30px rgba(44,32,23,.4);transform:translateY(-2px);}
-.fase .num{font-family:var(--font-display);font-weight:800;font-size:2.6rem;color:var(--cream);-webkit-text-stroke:1.5px var(--gold);line-height:1;text-align:center;}
+.fase .num{width:64px;height:64px;border-radius:50%;background:linear-gradient(160deg,var(--gold),var(--gold-soft));color:var(--navy);font-family:var(--font-display);font-weight:800;font-size:1.7rem;line-height:1;display:grid;place-items:center;justify-self:center;box-shadow:0 12px 26px -10px rgba(194,160,98,.75),inset 0 1px 0 rgba(255,255,255,.55);}
 .fase h3{font-weight:800;text-transform:uppercase;font-size:1.1rem;color:var(--navy);letter-spacing:0;}
 .fase p{margin-top:8px;color:#4f4539;font-size:.98rem;}
 .metodo .closing{margin-top:40px;font-family:var(--font-serif);font-style:italic;font-size:clamp(1.3rem,2.3vw,1.7rem);color:var(--wine);max-width:60ch;line-height:1.4;}
@@ -306,8 +306,8 @@ video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-see
   .hero-text .kicker{display:none;}
   .about .grid{grid-template-columns:1fr;gap:40px;}
   .about-photo{max-width:380px;margin:0 auto;}
-  .fase{grid-template-columns:64px 1fr;gap:16px;padding:22px;}
-  .fase .num{font-size:2rem;}
+  .fase{grid-template-columns:56px 1fr;gap:14px;padding:22px;}
+  .fase .num{width:50px;height:50px;font-size:1.3rem;}
   .guarantee .grid{grid-template-columns:1fr;justify-items:center;text-align:center;}
   .guarantee p{margin-inline:auto;}
 }
