@@ -254,9 +254,12 @@ video::-webkit-media-controls-seek-back-button,video::-webkit-media-controls-see
 /* guarantee */
 .guarantee{background:var(--paper);}
 .guarantee .grid{display:grid;grid-template-columns:200px 1fr;gap:46px;align-items:center;}
-.gbadge{width:200px;height:200px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;text-align:center;background:#fff;box-shadow:0 30px 60px -30px rgba(194,160,98,.6);}
-.gbadge .num{font-family:var(--font-display);font-weight:900;font-size:4rem;color:var(--wine);line-height:.9;}
-.gbadge .d{font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.2em;font-size:.7rem;color:var(--navy);margin-top:4px;}
+.gbadge{position:relative;width:200px;height:200px;border-radius:50%;border:1px solid rgba(194,160,98,.75);display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 30%,#fffdf8,#f8f0dd 62%,#ecdcba);box-shadow:0 30px 60px -26px rgba(194,160,98,.8),inset 0 2px 6px rgba(255,255,255,.9),inset 0 -12px 28px rgba(194,160,98,.3);}
+.gbadge:before{content:"";position:absolute;inset:-13px;border-radius:50%;background:repeating-conic-gradient(var(--gold) 0 4deg,transparent 4deg 10deg);opacity:.55;-webkit-mask:radial-gradient(circle,transparent 60%,#000 61%);mask:radial-gradient(circle,transparent 60%,#000 61%);}
+.gbadge:after{content:"";position:absolute;inset:11px;border-radius:50%;border:1.5px solid rgba(194,160,98,.65);}
+.gbadge .num{font-family:var(--font-display);font-weight:900;font-size:4.2rem;color:var(--wine);line-height:.9;text-shadow:0 2px 0 rgba(255,255,255,.7);}
+.gbadge .d{font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.2em;font-size:.68rem;color:var(--navy);margin-top:6px;}
+.gbadge .d:before,.gbadge .d:after{content:"";display:inline-block;width:22px;height:1px;background:var(--gold);vertical-align:middle;margin:0 7px;}
 .guarantee h2{font-size:clamp(1.7rem,3vw,2.4rem);}
 .guarantee p{margin-top:16px;color:#4a4036;max-width:60ch;}
 .guarantee .btn{margin-top:26px;}
